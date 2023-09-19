@@ -2,8 +2,8 @@ const BLOG = {
   title: '谷雨的博客',
   author: 'GuYu',
   email: 'lee.gaecoli@gmail.com',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
+  link: 'http://solee.fun',
+  description: '应该写点什么',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -51,7 +51,7 @@ const BLOG = {
       repo: ''
     },
     cusdisConfig: {
-      appId: '', // data-app-id
+      appId: '07c9330b-11a9-4bdc-b1be-c510cd2c8e08', // data-app-id
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
