@@ -17,6 +17,9 @@ const Footer = ({ fullWidth }) => {
           <p>
             © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
           </p>
+          <p>
+            Power by notion
+          </p>
         </div>
       </div>
     </div>
