@@ -73,7 +73,7 @@ export default function Header ({ navBarTitle, fullWidth }) {
   const titleRef = useRef(/** @type {HTMLParagraphElement} */ undefined)
 
   function handleClickHeader (/** @type {MouseEvent} */ ev) {
-    
+
     if (![navRef.current, titleRef.current].includes(ev.target)) return
 
     window.scrollTo({
