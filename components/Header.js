@@ -73,6 +73,7 @@ export default function Header ({ navBarTitle, fullWidth }) {
   const titleRef = useRef(/** @type {HTMLParagraphElement} */ undefined)
 
   function handleClickHeader (/** @type {MouseEvent} */ ev) {
+    
     if (![navRef.current, titleRef.current].includes(ev.target)) return
 
     window.scrollTo({
@@ -110,14 +111,14 @@ export default function Header ({ navBarTitle, fullWidth }) {
               alt={BLOG.title}
               onError={() => setFavicon(true)}
             />
-            <HeaderName
-              ref={titleRef}
-              siteTitle={BLOG.title}
-              siteDescription={BLOG.description}
-              postTitle={navBarTitle}
-              onClick={handleClickHeader}
-            />
           </Link>
+          <HeaderName
+            ref={titleRef}
+            siteTitle={BLOG.title}
+            siteDescription={BLOG.description}
+            postTitle={navBarTitle}
+            onClick={handleClickHeader}
+          />
         </div>
         <NavBar />
       </div>
