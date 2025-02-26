@@ -61,6 +61,7 @@ const BLOG = {
       repoId: 'R_kgDOKVbmTg',
       category: 'General',
       categoryId: 'DIC_kwDOKVbmTs4CnWDx',
+      mapping: 'title'
     }
   },
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)

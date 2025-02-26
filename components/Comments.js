@@ -79,12 +79,11 @@ const Comments = ({ frontMatter }) => {
           repoId={BLOG.comment.giscusConfig.repoId}
           category={BLOG.comment.giscusConfig.category}
           categoryId={BLOG.comment.giscusConfig.categoryId}
-          mapping="pathname"
+          mapping={BLOG.comment.giscusConfig.mapping}
           reactionsEnabled="1"
           emitMetadata="0"
           theme={BLOG.appearance === 'dark' ? 'dark' : 'light'}
           lang="zh-CN"
-          loading="lazy"
         />
       )}
     </div>
