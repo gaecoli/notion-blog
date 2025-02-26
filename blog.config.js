@@ -37,8 +37,8 @@ const BLOG = {
     }
   },
   comment: {
-    // support provider: gitalk, utterances, cusdis
-    provider: 'cusdis', // leave it empty if you don't need any comment plugin
+    // support provider: gitalk, utterances, cusdis, giscus
+    provider: 'giscus', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
       repo: '', // The repository of store comments
       owner: '',
@@ -55,6 +55,12 @@ const BLOG = {
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js', // change this if you're using self-hosted version
       autoApproval: true
+    },
+    giscusConfig: {
+      repo: 'gaecoli/notion-blog',
+      repoId: 'R_kgDOKVbmTg',
+      category: 'General',
+      categoryId: 'DIC_kwDOKVbmTs4CnWDx',
     }
   },
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)

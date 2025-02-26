@@ -23,6 +23,12 @@ const CusdisComponent = dynamic(
   },
   { ssr: false }
 )
+const GiscusComponent =dynamic(
+  () => {
+    return import('@giscus/react')
+  },
+  { ssr: false }
+)
 
 const Comments = ({ frontMatter }) => {
   const router = useRouter()
@@ -65,6 +71,20 @@ const Comments = ({ frontMatter }) => {
             pageUrl: BLOG.link + router.asPath,
             theme: BLOG.appearance
           }}
+        />
+      )}
+      {BLOG.comment && BLOG.comment.provider === 'giscus' && (
+        <GiscusComponent
+          repo={BLOG.comment.giscusConfig.repo}
+          repoId={BLOG.comment.giscusConfig.repoId}
+          category={BLOG.comment.giscusConfig.category}
+          categoryId={BLOG.comment.giscusConfig.categoryId}
+          mapping="pathname"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          theme={BLOG.appearance === 'dark' ? 'dark' : 'light'}
+          lang="zh-CN"
+          loading="lazy"
         />
       )}
     </div>
